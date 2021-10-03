@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: moraesjeremias/ini-k8s-wheight-api
+  pullPolicy: IfNotPresent
+  tag: "v1"
+
+
+service:
+  type: NodePort
+  port: 8082
+  targetPort: 5000
+  nodePort: 30000
